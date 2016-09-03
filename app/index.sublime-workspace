@@ -1,0 +1,224 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"js",
+				"json_array"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"db",
+				"dbname"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/zachary/wetsuit-calculator/app/index.html",
+		"/Volumes/Master/Documents/web stuff/email campaigns/2016/07_12_2016_lumo/lumo.html",
+		"/Volumes/Master/Documents/web stuff/blog2/wp-config.php",
+		"/Users/zachary/Downloads/ysw-combined-footer.js",
+		"/Users/zachary/Downloads/ysw-combined-styles-2014.css",
+		"/Applications/MAMP/htdocs/wetsuit_caclulator_2016/sqlJSON.php",
+		"/Users/zachary/wetsuit-calculator/app/views/form.html",
+		"/Users/zachary/wetsuit-calculator/app/scripts/controllers/form.js",
+		"/Applications/MAMP/htdocs/wetsuit_caclulator_2016/insert.php",
+		"/Applications/MAMP/htdocs/wetsuit_caclulator_2016/View1.html",
+		"/Applications/MAMP/htdocs/wetsuit_caclulator_2016/script.js",
+		"/Applications/MAMP/htdocs/wetsuit_caclulator_2016/index.html",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from site.trisports.com/includes/config.php",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from site.trisports.com/SQLTestForm.htm",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from site.trisports.com/sqlJSON.php",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from S drive/SQLTestForm.htm",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from S drive/includes/config.php",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from S drive/sqlXML.php",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from S drive/includes/testconnect.php",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from S drive/includes/closedb.php",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from S drive/includes/opendb.php",
+		"/Applications/MAMP/htdocs/2015 calculator/old - from S drive/sqlXML_test.php"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"http://university.tri-sports.com/2016/07/01/the-single-most-important-principle-of-triathlon-training/",
+			"while",
+			"/sw",
+			"http://lib.store.yahoo.net/lib/trisports/ysw-what-customers-say.png",
+			"http:/http://lib.store.yahoo.net/lib/trisports/ysw-what-customers-say.png",
+			"http:/lib.store.yahoo.net/lib/trisports/",
+			"http:/lib.store.yahoo.net/lib/trisports/http://",
+			"url(",
+			"url\\([h]",
+			"url\\([^h]",
+			"url(",
+			"Calculator",
+			".css",
+			"controller",
+			"allo",
+			"href=\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"http://university.tri-sports.com/2016/07/08/blending-consistency-with-variety-to-gain-peak-fitness/",
+			"/ysw",
+			"http://lib.store.yahoo.net/lib/trisports/",
+			"http://",
+			"url(http:/lib.store.yahoo.net/lib/trisports/",
+			"href=\"/lib/trisports/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 351.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

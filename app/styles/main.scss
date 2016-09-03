@@ -1,0 +1,153 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  background: url('../images/SwimOverhead.jpg')fixed no-repeat;
+  background-size: cover;
+
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+/* limit header image size */
+.container{
+  background-color: rgba(255,255,255,.7);
+  .headerImage{
+  max-width:100%;
+  }
+}
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+/* set two columns to constant size, results window to scrollable for desktop*/
+.row.mainWindow{
+  height:394px;
+    .well{
+    background-color:rgba(245,245,245,.9);
+    }
+}
+.resultsWindow{
+  height:100%;
+}
+.resultsWindow .well{
+  height:100%;
+  overflow:scroll;
+}
+.resultsWindowMobile{
+  display:none;
+}
+.popover{
+  max-width:60%;
+}
+/*Set required class with red asterisk*/
+
+label.required::after {
+ content: "*";
+ position:absolute;
+ top:5px;
+ right:5px;
+ color:#A94358;
+}
+img.loader{
+  margin:auto;
+  display:block;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+ .col-sm-5.footField{
+ padding-right:0;
+ }
+
+}
+@media screen and (max-width: 767px){
+   /* undo styles for mobile*/
+.row.mainWindow{
+  height:100%;
+}
+.resultsWindow{
+  height:100%;
+  overflow:visible;
+}
+input.form-control, select.form-control{
+  font-size:16px;
+}
+.resultsWindowMobile{
+  display:block;
+  clear:both;
+}
+}

@@ -1,0 +1,212 @@
+
+  <!--     Name:<input type="number" ng-model="filter.name">
+      <br/>
+      <ul>
+          <li ng-repeat="friend in friends | filter:filter.name | orderBy:'fname'">{{friend.fname}} {{friend.lname}}</li>
+      </ul>
+      <br/>
+      <fieldset style="width:200px;">
+          <legend>Add Friend</legend>
+          <form name="addcustomer" method="POST">
+              First Name:<input type="number" ng-model="newFriend.fname" name="firstname"/>
+              <br/>
+              Last Name :<input type="number" ng-model="newFriend.lname" name="lastname"/>
+              <br/>
+              <button data-ng-click="addNewFriend()" name="add">Add Friend</button>
+          </form>
+      </fieldset>
+      <a href="#/view2" style="margin:auto;">Next</a> -->
+
+  <div ng-controller="FormCtrl">
+  <div class="row mainWindow">
+  <!--     <form class="form-horizontal"  name="inputForm" ng-submit="getWetsuits()"  action="http://localhost:8888/wetsuit_caclulator_2016/sqlJSONform.php" method="POST">
+   --> <div class="col-sm-6 col-xs-12">
+        <form class="form-horizontal well " id="formMetric" name="inputForm" ng-submit="getWetsuits()" method="POST" novalidate >
+        <input type="hidden" name="weight" id="weight" ng-model="formData.weight">
+        <input type="hidden" name="heightVal" id="weight" ng-model="formData.height">
+        <div class="form-group">
+         <label for="height"  class="col-sm-3 col-xs-12 control-label required">Height </label>
+         <div class="col-xs-6 col-sm-5 footField" ng-hide="showCm">
+          <div class="input-group " ng-class="{ 'has-error': inputForm.heightValFt.$touched && inputForm.heightValFt.$invalid}">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{units}} <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a ng-click="unitsCm()">cm</a></li>
+                <li><a ng-click="unitsFt()">feet-inches</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <input id="heightFt" ng-hide="showCm" class="form-control" type="number" min="0" inputmode="numeric" pattern="[0-9]*" min="0" inputmode="numeric" pattern="[0-9]*" name="heightValFt" ng-model="formData.heightFt" placeholder="Feet" ng-required="!showCm" />
+            </div><!-- /input-group -->
+
+            <div class="has-error" ng-messages="inputForm.heightValFt.$error" ng-show="inputForm.heightValFt.$touched">
+                  <p class="help-block" ng-message="required">This field is required.</p>
+                  <p class="help-block" ng-message="number">This field must be a number</p>
+            </div>
+          </div><!-- /.col-sm-5 -->
+         <div class="col-sm-4 col-xs-6" ng-class="{ 'has-error': inputForm.heightValIn.$touched && inputForm.heightValIn.$invalid}">
+          <input ng-hide="showCm" id="heightIn" class="form-control" type="number" min="0" inputmode="numeric" pattern="[0-9]*" min="0" inputmode="numeric" pattern="[0-9]*" name="heightValIn" ng-model="formData.heightIn" placeholder="Inches" ng-required="!showCm"/>
+
+            <div class=" has-error" ng-messages="inputForm.heightValIn.$error" ng-show="inputForm.heightValIn.$touched">
+                 <p class="help-block" ng-message="required">This field is required.</p>
+                  <p class="help-block" ng-message="number">This field must be a number</p>
+            </div>
+        </div>
+        <div class="col-sm-9 col-xs-12" ng-show="showCm" ng-class="{ 'has-error': inputForm.heightVal.$touched && inputForm.heightVal.$invalid}">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{units}} <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a ng-click="unitsCm()">cm</a></li>
+                <li><a ng-click="unitsFt()">feet-inches</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <input id="heightCm" ng-show="showCm" class="form-control" type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="heightCm" ng-model="formData.heightCm" ng-required="showCm"/>
+          </div>
+          <div class=" has-error" ng-messages="inputForm.heightVal.$error" ng-show="inputForm.heightVal.$touched">
+                  <p class="help-block" ng-message="required">This field is required.</p>
+                  <p class="help-block" ng-message="number">This field must be a number</p>
+            </div><!-- /input-group -->
+        </div><!-- /.col-sm-9 -->
+        </div>
+        <div class="form-group">
+          <label for="weight"  class="col-sm-3 control-label required">Weight </label>
+           <div class="col-sm-9">
+            <div class="input-group" ng-class="{ 'has-error': inputForm.weightValLb.$touched && inputForm.weightValLb.$invalid, required:showKg==false}">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{weightUnits}} <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a ng-click="unitsLb()">lbs</a></li>
+                  <li><a ng-click="unitsKg()">kg</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            <input ng-show="showKg" id="weightKg" class="form-control" type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="weightVal" ng-model="formData.weightKg" ng-required="showKg"/>
+            <input ng-hide="showKg" id="weight-lb" class="form-control" type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="weightValLb" ng-model="formData.weightLb" ng-required="!showKg"/>
+            </div><!-- /input-group -->
+            <div class=" has-error" ng-messages="inputForm.weightVal.$error" ng-show="inputForm.weightVal.$touched">
+                  <p class="help-block" ng-message="required">This field is required.</p>
+                  <p class="help-block" ng-message="number">This field must be a number</p>
+            </div>
+            <div class=" has-error" ng-messages="inputForm.weightValLb.$error" ng-show="inputForm.weightValLb.$touched">
+                  <p class="help-block" ng-message="required">This field is required.</p>
+                  <p class="help-block" ng-message="number">This field must be a number</p>
+            </div>
+          </div><!-- /.col-lg-6 -->
+        </div>
+        <div class="form-group">
+          <label for="gender"  class="col-sm-3 control-label required">Gender </label>
+          <div class="col-sm-9">
+            <select id="gender"  class="form-control"  name="gender"  ng-model="formData.gender" required>
+              <option></option>
+              <option value="1" >Male</option>
+              <option value="0">Female</option>
+            </select>
+            <div class=" has-error" ng-messages="inputForm.gender.$error" ng-show="inputForm.gender.$touched">
+                  <p class="help-block" ng-message="required">This field is required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="body"  class="col-sm-3 control-label" >
+            Body Type
+            <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Body Type Help" data-content="<p> You are <em><strong>not</strong></em> required to enter a body type. However, doing so will help to narrow down the selection to suits that we beleive will fit you the best.</p>
+              <ul>
+                <li><strong>Tall &amp; Slender:</strong> You have a nickname like 'beanpole'</li>
+                <li><strong>Short &amp; Stocky:</strong> You have a nickname like 'sidecar'</li>
+                <li><strong>Barrel-Chested:</strong> You bench-press compact cars</li>
+                <li><strong>Full-Figured: </strong>You have 'curves'</li>
+                <li><strong>Swimmer's build:</strong> Broad shoulders and skinny legs</li>
+                <li><strong>Cyclist's build:</strong> Skinny shoulders and broad legs</li>
+                <li><strong>Runner's Build:</strong> Skinny everything</li>
+                <li><strong>Wide Shoulders &amp; Narrow Hips:</strong> Like it sounds</li>
+                <li><strong>Disproportionate Leg/Torso</strong>: &nbsp;'All leg' or 'all thorax'&nbsp;</li>
+              </ul>">
+              <span class="glyphicon glyphicon-question-sign"></span></a>
+            </label>
+          <div class="col-sm-9">
+            <select id="body" class="form-control"  name="body"  ng-model="formData.body">
+              <option></option>
+              <option value="TS">Tall & Slender</option>
+              <option value="SB">Swimmer's Build</option>
+              <option value="RB">Runner's Build</option>
+              <option value="CB">Cyclist's Build</option>
+              <option value="BC">Barrel Chested</option>
+              <option value="WSNH">Wide Shoulders & Narrow Hips</option>
+              <option value="DLTL">Disproportionate Leg/Torso</option>
+              <option value="SS">Short & Stocky</option>
+            </select>
+           </div>
+          </div>
+          <div class="form-group">
+          <label for="sleeves"  class="col-sm-3 control-label">Sleeves</label>
+          <div class="col-sm-9">
+            <select id="sleeves" class="form-control"  name="sleeves"  ng-model="formData.sleeves">
+              <option value=""></option>
+              <option value="1">Fullsleeved</option>
+              <option value="0">Sleeveless</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="price"  class="col-sm-3 control-label">Price Limit</label>
+          <div class="col-sm-9">
+          <div class="input-group">
+          <span class="input-group-addon">$</span>
+            <input class="form-control" type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="price" ng-model="formData.price" />
+            </div>
+            </div>
+          </div>
+    <button name="get" class="btn btn-primary" type="submit" ng-disabled="inputForm.$invalid" >Get wetsuits</button> 
+<!--     <button name="test" class="btn btn-default" ng-click="testData()">Quick Test</button> -->
+  </form>   
+</div>
+  <div class="resultsWindowMobile"></div>    
+  <div class="col-sm-6 col-xs-12  resultsWindow">
+    <div class="well">
+    <img class="loader" src="images/loading.gif" ng-show="loading" />
+      <h3 ng-show="dataError"> Error: {{data.error}}<span ng-if="data.error==undefined" >{{data}}</span></h3>
+    <div ng-hide="hidden">
+    <h3 >
+          <span ng-hide="dataError" ng-if="data.length!=undefined">{{data.length}} wetsuits found</span>
+    </h3>
+    <img class="loader" src="images/loading.gif" ng-show="loading"  />
+    <table class="animate-container table table-striped" >
+    <tbody>
+      <tr class="animate-repeat" ng-repeat="wetsuit in data">
+      <td>
+        <img src="http://hg.trisports.ws/wetsuit_calculator_2016/includes/scraper.php?href={{wetsuit.link}}" height="40"/>
+        
+      </td>
+      <td>
+<!--           <span class="glyphicon glyphicon-new-window"></span>
+ -->          <a href="http://www.trisports.com/{{wetsuit.link}}" target="_blank ">{{wetsuit.brand}} {{wetsuit.model}}</a>
+      </td>
+      <td>
+        {{wetsuit.size}}
+      </td>
+      <td>
+        {{wetsuit.price | currency}}
+      </td>
+    </tr>
+    </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+  </div> <!-- end bootstrap row -->
+
+<!--   <div class="code col-xs-12" >
+   Request:
+    <pre>{{formData}}</pre>
+    Status:
+    <pre>{{status}}</pre>
+    Data:
+    <pre>{{data}}</pre>
+  </div>
+</div> -->
+<script type="number/javascript">
+$( document ).ready(function() {
+  $('[data-toggle="popover"]').popover({html: true, container: '.mainWindow'})
+});
+</script>
+

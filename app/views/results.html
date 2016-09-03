@@ -1,0 +1,16 @@
+    <div class="well">
+    <h3 >
+      {{data.length}} wetsuits found
+    </h3>
+    <ol>
+      <li ng-repeat="wetsuit in data">
+          <a href="http://www.trisports.com/{{wetsuit.link}}" target="_blank ">{{wetsuit.brand}} {{wetsuit.model}}</a>
+      </li>
+    </ol>
+    <button class="btn btn-primary" ng-click="reset()">Reset Search</button>
+  </div>
+  <div class="code" style="display: none;">
+    <pre>{{formData}}</pre>
+    <pre>{{status}}</pre>
+    <pre>{{data}}</pre>
+  </div>
